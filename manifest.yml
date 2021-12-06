@@ -1,0 +1,19 @@
+modules:
+  confluence:contextMenu:
+    - key: highlight-confluence-trello
+      function: main
+      title: Create new insight
+      description: Simple app creates a Trello card from a hightlighted text in Confluence!
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/55f4ea81-01af-4060-b7ac-d76d5e6b4e27
+  name: hightlight-confluence-trello-app
+  runtime:
+    snapshots: false
+permissions:
+  external:
+    fetch:
+      backend:
+        - 'https://api.trello.com'
